@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Contaccto</title>
+  </head>
+  <body>
+    <form action="http://andreihelo-sinatra.herokuapp.com/contact">
+      <fieldset>
+        <legend>Informacion Personal:</legend>
+        Nombre:<br/>
+        <input type="text" name="person[name]"/>
+        <br/><br/>
+        Sexo:<br/>
+        <input type="radio" name="person[genre]" value="masculino" checked/>Masculino
+        <br>
+        <input type="radio" name="person[genre]" value="femenino"/>Femenino
+        <br/><br/>
+        Fecha de Nacimiento:<br/>
+        <input type="date" name="person[birthdate]">
+        <br/><br/>
+        Ciudad de Origen:<br/>
+          <input list="ciudad" name="person[city]">
+          <datalist id="ciudad">
+            <option value="">
+            <option value="chihuahua">
+            <option value="coahuila">
+            <option value="Sonora">
+            <option value="Nuevo Leon">
+          </datalist>
+        <br/><br/>
+</fieldset>
+<fieldset>
+       <legend>Preferencias:</legend>
+        Seleccione uno o mas:<br/>
+        <input type="checkbox" name="person[preferences][codigo]" value="codigo"/>Me gusta programar mas de 1 hora al dia.
+        <br/>
+        <input type="checkbox" name="person[preferences][videojuegos]" value="videojuegos"/>Tengo al menos una consola y mas de 1 juego.
+        <br/>
+        <input type="checkbox" name="person[preferences][gadgets]" value="gadgets"/>Leo sobre los ultimos gadgets del momento.
+        <br/><br/>
+        Escribenos:<br/>
+        <textarea name="message" rows="10" cols="30">Escribe Aqui tu texto...</textarea>
+        <br/><br/>
+        <input type="submit" value="Enviar"/>
+      </fieldset>
+    </form>
+  </body>
+</html>
